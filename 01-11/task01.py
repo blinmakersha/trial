@@ -18,14 +18,15 @@ class Triangle:
         self.side3 = side3
 
     def perimeter(self):
-        x = self.side1 + self.side2 + self.side3
-        return float('{:.2f}'.format(x))
+        """Finding the perimeter of the triangle."""
+        res = self.side1 + self.side2 + self.side3
+        return round(res, 2)
 
     def area(self):
+        """Finding the area of the triangle."""
         s_per = self.perimeter() / 2
-        x = (s_per * (s_per - self.side1) * (s_per - self.side2) * (s_per 
-- self.side3)) ** 0.5
-        return float('{:.2f}'.format(x))
+        res = (s_per * (s_per - self.side1) * (s_per - self.side2) * (s_per - self.side3)) ** 0.5
+        return round(res, 2)
 
 
 class Circle:
@@ -40,10 +41,11 @@ class Circle:
         self.radius = radius
 
     def length(self):
-        x = self.radius * pi * 2
-        return float('{:.2f}'.format(x))
+        """Finding the length of the circle."""
+        res = self.radius * pi * 2
+        return round(res, 2)
 
     def area(self):
-        x = (self.radius ** 2) * pi
-        return float('{:.2f}'.format(x))
-
+        """Finding the area of the circle."""
+        res = (self.radius ** 2) * pi
+        return round(res, 2)
